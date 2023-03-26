@@ -24,19 +24,21 @@
     @endif
     <hr>
 
-    <h2>Create a New Todo</h2>
+    <h2 class="text-center">Create a New Todo</h2>
 
     <form action="/todo" method="POST">
         @csrf
-        <div>
-            <label for="title">Title:</label>
+        <div class="text-center">
+            <label for="title">Title</label>
+            <br>
             <input type="text" name="title" id="title">
         </div>
-        <div>
-            <label for="description">Description:</label>
+        <div class="text-center">
+            <label for="description">Description</label>
+            <br>
             <textarea name="description" id="description"></textarea>
         </div>
-        <div>
+        <div class="text-center">
             <button type="submit">Create</button>
         </div>
     </form>

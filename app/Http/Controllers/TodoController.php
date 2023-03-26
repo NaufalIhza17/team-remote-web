@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Todo;
 use Illuminate\Http\Request;
+use App\Models\Todo;
 
 class TodoController extends Controller
 {
