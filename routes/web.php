@@ -27,14 +27,7 @@ Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('acti
 Route::get('register', [RegisterController::class, 'register'])->name('register');
 Route::post('register/action', [RegisterController::class, 'actionregister'])->name('actionregister');
 
-// Route::get('/index', 'TodoController@index');
 Route::get('index', [TodoController::class, 'index']);
-
-// Route::post('/todo', 'TodoController@store');
 Route::get('todo', [TodoController::class, 'store']);
-
-// Route::put('/todo/{id}', 'TodoController@update');
 Route::put('/todo/{id}', [TodoController::class, 'update'])->name('todo.update');
-
-// Route::delete('/todo/{id}', 'TodoController@destroy');
 Route::delete('/todo/{id}', [TodoController::class, 'destroy']);
