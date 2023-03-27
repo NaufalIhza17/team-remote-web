@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('acti
 //REGISTER
 Route::get('register', [RegisterController::class, 'register'])->name('register');
 Route::post('register/action', [RegisterController::class, 'actionregister'])->name('actionregister');
+
+//TODO
+
+Route::get('todo/', [TodoController::class, 'tampiltodo'])->name('tampiltodo')->middleware('auth');
+Route::get('todo/tambah', [TodoController::class, 'tambahtodo'])->name('tambahtodo')->middleware('auth');
+Route::post('todo/simpan', [TodoController::class, 'simpantodo'])->name('simpantodo')->middleware('auth');
