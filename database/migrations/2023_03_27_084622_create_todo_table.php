@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('todo', function (Blueprint $table) {
             $table->id('id_todo');
-            $table->string('nm_todo')->nullable();
-            $table->string('desc_todo')->nullable();
-            // $table->timestamps();
+            $table->string('nm_todo');
+            $table->string('desc_todo');
+            $table->timestamps();
         });
     }
 

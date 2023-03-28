@@ -9,23 +9,15 @@ class TodoController extends Controller
 {
     public function tampiltodo()
     {
-        return view('tampiltodo');
+        $todo = Todo::select('*')
+                ->get();
+        return view('tampiltodo', ['todo' => $todo]);
     }
 
     public function tambahtodo()
     {
         return view('tambahtodo');
     }
-
-    // public function simpantodo(Request $request)
-    // {
-    //     $todo = TodoModel::create([
-    //         'nm_todo' => $request->nm_santri,
-    //         'desc_todo' => $request->tmp_lahir
-    //     ]);
-
-    //     return redirect()->route('tampilsantri');
-    // }
 
     public function simpantodo(Request $request)
     {
